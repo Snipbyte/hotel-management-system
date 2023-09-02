@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>rooms_admin</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+	<!-- <script type="text/javascript" src="main.js"></script> -->
+	<link rel="stylesheet" 
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<link rel="stylesheet" href="https://drive.google.com/uc?export=view&id=1yTLwNiCZhIdCWolQldwq4spHQkgZDqkG">
+</head>
+<style type="text/css">
+	.my-custom-scrollbar {
+		position: relative;
+		height: 500px;
+		overflow: auto;
+	}
+	.table-wrapper-scroll-y {
+		display: block;
+	}
+</style>
+<body>
+	<div id="container" class="w-100  h-100 d-flex flex-wrap">
+		<div id="left" class="w-25 d-none d-md-block bg-dark text-white shadow">
+			<h2 class="p-2 text-center border border-white border-end-0 border-bottom border-start-0 border-top-0"><i class="fa-solid fa-shop me-2"></i>PHP-Hotel</h2>
+			<ul id="menu" class="list-unstyled p-2 w-100 h-100" style="line-height: 1.5em;">
+				<li class="p-2 rounded"><a href="dashboard.html"  class="btn w-100 text-start text-white"><i class="fa-solid fa-bars me-2"></i>Dashboard</a></li>
+				<li class="p-2 rounded"><a href="new_bookings.html" class="btn w-100 text-start text-white"><i class="fa-solid fa-shirt me-2"></i>New Bookings</a></li>
+				<li class=" p-2 rounded"><a href="all_booking_records.html" class="btn w-100 text-start text-white"><i class="fa-solid fa-person me-2"></i>Booking Records</a></li>
+				<li class=" p-2 rounded"><a href="dashboard.html" class="btn w-100 text-start text-white"><i class="fa fa-dollar me-2"></i>Users</a></li>
+				<li class=" p-2 rounded"><a href="user_quiries.html" class="btn w-100 text-start text-white"><i class="fa fa-file me-2"></i>Messages</a></li>
+				<li class=" p-2 rounded"><a href="login.html" class="btn w-100 text-start text-white"><i class="fa-solid fa-arrow-left me-2"></i>Ratings</a></li>
+				<li class=" p-2 rounded"><a href="admin_rooms.html" class="btn w-100 text-start text-white"><i class="fa-solid fa-arrow-left me-2"></i>Rooms</a></li>
+				<li class=" p-2 rounded"><a href="admin_facilities.html" class="btn w-100 text-start text-white"><i class="fa-solid fa-arrow-left me-2"></i>Facilities</a></li>
+				<li class=" p-2 rounded"><a href="features.html" class="btn w-100 text-start text-white"><i class="fa-solid fa-arrow-left me-2"></i>Features</a></li>
+				<li class=" p-2 rounded"><a href="carousel.html" class="btn w-100 text-start text-white"><i class="fa-solid fa-arrow-left me-2"></i>Carousel</a></li>
+				<li class=" p-2 rounded"><a href="dashboard.html" class="btn w-100 text-start text-white"><i class="fa-solid fa-arrow-left me-2"></i>Settings</a></li>
+			</ul>
+		</div>
+		<nav class="d-md-none navbar navbar-expand-lg  navbar-dark bg-dark w-100 ">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="#"><i class="fa-solid fa-shop me-2"></i>PHP-Hotel</a>
+				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav">
+						<li class="p-2 rounded nav-item"><a href="dashboard.html"  class="btn w-100 text-start text-white"><i class="fa-solid fa-bars me-2"></i>Dashboard</a></li>
+						<li class="p-2 rounded nav-item"><a href="new_bookings.html" class="btn w-100 text-start text-white"><i class="fa-solid fa-shirt me-2"></i>New Bookings</a></li>
+						<li class=" p-2 rounded nav-item"><a href="all_booking_records.html" class="btn w-100 text-start text-white"><i class="fa-solid fa-person me-2"></i>Booking Records</a></li>
+						<li class=" p-2 rounded nav-item"><a href="dashboard.html" class="btn w-100 text-start text-white"><i class="fa fa-dollar me-2"></i>Users</a></li>
+						<li class=" p-2 rounded nav-item"><a href="user_quiries.html" class="btn w-100 text-start text-white"><i class="fa fa-file me-2"></i>Messages</a></li>
+						<li class=" p-2 rounded nav-item"><a href="login.html" class="btn w-100 text-start text-white"><i class="fa-solid fa-arrow-left me-2"></i>Ratings</a></li>
+						<li class=" p-2 rounded nav-item"><a href="admin_rooms.html" class="btn w-100 text-start text-white"><i class="fa-solid fa-arrow-left me-2"></i>Rooms</a></li>
+						<li class=" p-2 rounded nav-item"><a href="admin_facilities.html" class="btn w-100 text-start text-white"><i class="fa-solid fa-arrow-left me-2"></i>Facilities</a></li>
+						<li class=" p-2 rounded nav-item"><a href="features.html" class="btn w-100 text-start text-white"><i class="fa-solid fa-arrow-left me-2"></i>Features</a></li>
+						<li class=" p-2 rounded nav-item"><a href="carousel.html" class="btn w-100 text-start text-white"><i class="fa-solid fa-arrow-left me-2"></i>Carousel</a></li>
+						<li class=" p-2 rounded nav-item"><a href="dashboard.html" class="btn w-100 text-start text-white"><i class="fa-solid fa-arrow-left me-2"></i>Settings</a></li>
+					</ul>
+				</div>
+			</div>
+		</nav>  
+		<div id="right" class=" w-md-75 w-100  p-4">
+			<div class="bg-white p-2 shadow">
+				<div class=" py-2 w-100 d-flex flex-wrap justify-content-between">
+					<span><b> Rooms </b></span>
+					<button id="btn" class="bg-dark text-center border-0 text-white rounded font-weight-bold" data-bs-toggle="modal" data-bs-target="#addroomModal">+Add</button>
+				</div>
+				<!-- Add Modal starts -->
+				<div class="modal fade text-dark" id="addroomModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+					<div class="modal-dialog modal-dialog-centered">
+						<div class="modal-content">
+							<div class="modal-header border border-dark border-end-0 border-bottom border-start-0 border-top-0 ">
+
+								<h3 class="modal-title text-center w-100" id=""> Add a Room</h3>
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							</div>
+							<div class="modal-body p-5 font-weight-bolder d-flex flex-wrap">
+								<form class="d-flex flex-wrap justify-content-between" method="post" enctype="multipart/form-data">
+
+									<input id="room_name" class="border-0 border-bottom border-dark  mb-3 bg-transparent shadow-0" style="width:45%; outline: none;" type="text"  placeholder="Room name" >
+
+									<input id="room_area" class="border-0 border-bottom border-dark  mb-3  bg-transparent shadow-0" style="width:45%; outline: none;" type="text"  placeholder="Area" >
+
+									
+
+									<input id="room_price" type="text"  class="border-0 border-bottom border-dark  mb-3  bg-transparent shadow-0" style="outline: none !important; width: 45%;" placeholder="Price per night">
+
+									<input id="room_quantity" type="text" class="border-0 border-bottom border-dark  mb-3  bg-transparent shadow-0" style="outline: none !important; width: 45%;" placeholder="Quantity">
+
+									<input id="room_adults" type="text" class="border-0 border-bottom border-dark  mb-3  bg-transparent shadow-0" style="outline: none !important; width: 45%;" placeholder="Adult(Max)">
+
+									<input id="room_children" type="text" class="border-0 border-bottom border-dark  mb-3  bg-transparent shadow-0" style="outline: none !important; width: 45%;" placeholder="Children(Max)">
+
+									<h6 class=" w-100">Facilities</h6>
+									
+									
+									<div>
+										<input type="checkbox" id="facility" name="facilities_check" value="Wifi">
+										<label for="facility"> Wifi</label>
+									</div>
+									<div>
+										<input type="checkbox" id="" name="facilities_check" value="Massage">
+										<label for="facility"> Massage</label>
+									</div>
+									<div>
+										<input type="checkbox" id="" name="facilities_check" value="Heater">
+										<label for="facility"> Heater</label>
+									</div>
+									
+									<h6 class=" w-100 mt-2">Features</h6>
+									
+									
+									<div>
+										<input type="checkbox" id="feature" name="feature_check" value="Balcony">
+										<label for="feature"> Balcony</label>
+									</div>
+									<div>
+										<input type="checkbox" id="feature" name="feature_check" value="Sea View">
+										<label for="feature"> Windows</label>
+									</div>
+									<div>
+										<input type="checkbox" id="feature" name="feature_check" value="Balcony">
+										<label for="feature"> Balcony</label>
+									</div>
+									<div>
+										<input type="checkbox" id="feature" name="feature_check" value="Sea View">
+										<label for="feature"> Lorem</label>
+									</div>
+									
+									<h6 class="w-100 pt-2">Description</h6>
+									<textarea id="room_description" class="w-100 p-2 mb-4" style="outline: none !important;"></textarea>
+
+									<button id="addroombtn" type="button" class="p-2 bg-dark border-0 text-white w-100 rounded font-weight-bold"  data-bs-dismiss="modal">Submit</button>
+								</form>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<!-- Add Modal Ends -->
+				<!-- Edit Modal starts -->
+				<div class="modal fade text-dark" id="editroomModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+					<div class="modal-dialog  modal-lg modal-dialog-centered">
+						<div class="modal-content">
+							<div class="modal-header border border-dark border-end-0 border-bottom border-start-0 border-top-0 ">
+								<h3 class="modal-title text-center w-100" id=""> Edit a Room</h3>
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							</div>
+							<div class="modal-body p-5 font-weight-bolder d-flex flex-wrap">
+								<form class="d-flex flex-wrap justify-content-between" method="post" enctype="multipart/form-data">
+									<input type="text" name="" id="edit_hidden_room_id">
+									<input id="edit_room_name" class="border-0 border-bottom border-dark  mb-3 bg-transparent shadow-0" style="width:45%; outline: none;" type="text"  placeholder="Room name" >
+
+									<input id="edit_room_area" class="border-0 border-bottom border-dark  mb-3  bg-transparent shadow-0" style="width:45%; outline: none;" type="text"  placeholder="Area" >
+
+									
+
+									<input id="edit_room_price" type="text"  class="border-0 border-bottom border-dark  mb-3  bg-transparent shadow-0" style="outline: none !important; width: 45%;" placeholder="Price per night">
+
+									<input id="edit_room_quantity" type="text" class="border-0 border-bottom border-dark  mb-3  bg-transparent shadow-0" style="outline: none !important; width: 45%;" placeholder="Quantity">
+
+									<input id="edit_room_adults" type="text" class="border-0 border-bottom border-dark mb-3  bg-transparent shadow-0" style="outline: none !important; width: 45%;" placeholder="Adult(Max)">
+
+									<input id="edit_room_children" type="text" class="border-0 border-bottom border-dark  mb-3  bg-transparent shadow-0" style="outline: none !important; width: 45%;" placeholder="Children(Max)">
+
+									<h6 class=" w-100">Facilities</h6>
+									
+									
+									<div>
+										<input type="checkbox" id="edit_facility" name="facilities_check" value="<?php echo $row['facility_name'];  ?>">
+										<label for="facility"> <?php echo $row['facility_name'];  ?></label>
+									</div>
+									
+									<h6 class=" w-100 mt-2">Features</h6>
+									
+									
+									<div>
+										<input type="checkbox" id="feature" name="feature_check" value="<?php echo $row['feature_name'];  ?>">
+										<label for="feature"> <?php echo $row['feature_name'];  ?></label>
+									</div>
+									
+									<h6 class="w-100 pt-2">Description</h6>
+									<textarea id="room_description" class="w-100 p-2 mb-4" style="outline: none !important;"></textarea>
+
+									<button id="addroombtn" type="button" class="p-2 bg-dark border-0 text-white w-100 rounded font-weight-bold"  data-bs-dismiss="modal">Submit</button>
+								</form>
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<!-- Edit Modal Ends -->
+				<!-- Images add Modal starts-->
+				<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+					<div class="modal-dialog modal-fullscreen">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5 class="modal-title" id="exampleModalLabel">Add Images</h5>
+								<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+							</div>
+							<div class="modal-body">
+
+								<input type="text" id="hidden_room_id" name="hidden_room_id" >
+
+								
+								<input type="file" class="room_img w-75 p-2 mb-3 border" name="room_img" id="room_img">
+
+								<button id="click_to_add_room_img" class="btn btn-dark p-3 " style="width:20%"  >Add </button>
+
+								<div class="d-flex flex-wrap justify-content-between gap-2">
+									
+									<div class="card bg-dark text-white " style="width:22rem">
+										<img src="https://media.istockphoto.com/id/517188688/photo/mountain-landscape.jpg?b=1&s=612x612&w=0&k=20&c=81f5HaMtoPNUrdfa4hnS8NcwEgD9tH2nnTUBu25Msug=" class="card-img" alt="...">
+										<div class="card-img-overlay d-flex justify-content-center align-items-center">
+											<button class="btn border">Delete image</button>
+
+										</div>
+									</div>
+									
+
+								</div>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+								<button type="button" class="btn btn-primary">Save changes</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Images add Modal ends-->
+
+				<div class="table-wrapper-scroll-y my-custom-scrollbar d-flex flex-wrap justify-content-around  p-2 gap-2">
+
+					<div class="card shadow" style="width: 18rem;">
+						<img src="https://assets-global.website-files.com/5c6d6c45eaa55f57c6367749/624b471bdf247131f10ea14f_61d31b8dbff9b500cbd7ed32_types_of_rooms_in_a_5-star_hotel_2_optimized_optimized.jpeg">				
+						<div class="card-body ">
+							<p class="text-center p-0 m-0 "><b class="room_id">  1 </b> </p> 
+							<h5 class="room_name text-center"> Luxury Room </h5>
+
+							<div class="w-100">
+								<div class="d-flex flex-wrap justify-content-between"> 
+									<p> 
+										<b class="room_area">Area : </b>
+									</p>
+									<p> 
+										300 sqft
+									</p>
+								</div>
+								<div class="d-flex flex-wrap justify-content-between"> 
+									<p> 
+										<b class="room_guests">Guests : </b>
+									</p>
+									<p> 
+										<b>A: </b>5
+										<br>
+										<b>C: </b>4
+									</p>
+								</div>
+								<div class="d-flex flex-wrap justify-content-between"> 
+									<p> 
+										<b class="room_price">Price : </b>
+									</p>
+									<p> 
+										300$
+									</p>
+								</div>
+								<div class="d-flex flex-wrap justify-content-between"> 
+									<p> 
+										<b class="room_quantity">Qty :</b>
+									</p>
+									<p> 
+										10
+									</p>
+								</div>
+
+
+							</div>
+							<button class="room_status w-100 p-2 bg-dark border-0 text-white rounded font-weight-bold">Active</button>
+							<div class="w-100 text-center text-dark mt-3">
+								<a class="room_delete_btn p-2 border text-dark rounded font-weight-bold"><i class="fa-solid fa-trash-can "></i></a>
+
+								<a href="room_images.html" class="room_images_btn p-2  border text-dark rounded font-weight-bold"><i class="fa-solid fa-image"    ></i>
+								</a>
+								
+								<a class="room_edit_btn p-2  border text-dark rounded font-weight-bold" ><i class="fa-solid fa-pen-to-square"></i></a>
+							</div>
+						</div>
+					</div>
+					<div class="card shadow" style="width: 18rem;">
+						<img src="https://assets-global.website-files.com/5c6d6c45eaa55f57c6367749/624b471bdf247131f10ea14f_61d31b8dbff9b500cbd7ed32_types_of_rooms_in_a_5-star_hotel_2_optimized_optimized.jpeg">				
+						<div class="card-body ">
+							<p class="text-center p-0 m-0 "><b class="room_id">  1 </b> </p> 
+							<h5 class="room_name text-center"> Luxury Room </h5>
+
+							<div class="w-100">
+								<div class="d-flex flex-wrap justify-content-between"> 
+									<p> 
+										<b class="room_area">Area : </b>
+									</p>
+									<p> 
+										300 sqft
+									</p>
+								</div>
+								<div class="d-flex flex-wrap justify-content-between"> 
+									<p> 
+										<b class="room_guests">Guests : </b>
+									</p>
+									<p> 
+										<b>A: </b>5
+										<br>
+										<b>C: </b>4
+									</p>
+								</div>
+								<div class="d-flex flex-wrap justify-content-between"> 
+									<p> 
+										<b class="room_price">Price : </b>
+									</p>
+									<p> 
+										300$
+									</p>
+								</div>
+								<div class="d-flex flex-wrap justify-content-between"> 
+									<p> 
+										<b class="room_quantity">Qty :</b>
+									</p>
+									<p> 
+										10
+									</p>
+								</div>
+
+
+							</div>
+							<button class="room_status w-100 p-2 bg-dark border-0 text-white rounded font-weight-bold">Active</button>
+							<div class="w-100 text-center text-dark mt-3">
+								<a class="room_delete_btn p-2 border text-dark rounded font-weight-bold"><i class="fa-solid fa-trash-can "></i></a>
+
+								<a href="room_images.html" class="room_images_btn p-2  border text-dark rounded font-weight-bold"><i class="fa-solid fa-image"    ></i>
+								</a>
+								
+								<a class="room_edit_btn p-2  border text-dark rounded font-weight-bold" ><i class="fa-solid fa-pen-to-square"></i></a>
+							</div>
+						</div>
+					</div>
+					<div class="card shadow" style="width: 18rem;">
+						<img src="https://assets-global.website-files.com/5c6d6c45eaa55f57c6367749/624b471bdf247131f10ea14f_61d31b8dbff9b500cbd7ed32_types_of_rooms_in_a_5-star_hotel_2_optimized_optimized.jpeg">				
+						<div class="card-body ">
+							<p class="text-center p-0 m-0 "><b class="room_id">  1 </b> </p> 
+							<h5 class="room_name text-center"> Luxury Room </h5>
+
+							<div class="w-100">
+								<div class="d-flex flex-wrap justify-content-between"> 
+									<p> 
+										<b class="room_area">Area : </b>
+									</p>
+									<p> 
+										300 sqft
+									</p>
+								</div>
+								<div class="d-flex flex-wrap justify-content-between"> 
+									<p> 
+										<b class="room_guests">Guests : </b>
+									</p>
+									<p> 
+										<b>A: </b>5
+										<br>
+										<b>C: </b>4
+									</p>
+								</div>
+								<div class="d-flex flex-wrap justify-content-between"> 
+									<p> 
+										<b class="room_price">Price : </b>
+									</p>
+									<p> 
+										300$
+									</p>
+								</div>
+								<div class="d-flex flex-wrap justify-content-between"> 
+									<p> 
+										<b class="room_quantity">Qty :</b>
+									</p>
+									<p> 
+										10
+									</p>
+								</div>
+
+
+							</div>
+							<button class="room_status w-100 p-2 bg-dark border-0 text-white rounded font-weight-bold">Active</button>
+							<div class="w-100 text-center text-dark mt-3">
+								<a class="room_delete_btn p-2 border text-dark rounded font-weight-bold"><i class="fa-solid fa-trash-can "></i></a>
+
+								<a href="room_images.html" class="room_images_btn p-2  border text-dark rounded font-weight-bold"><i class="fa-solid fa-image"    ></i>
+								</a>
+								
+								<a class="room_edit_btn p-2  border text-dark rounded font-weight-bold" ><i class="fa-solid fa-pen-to-square"></i></a>
+							</div>
+						</div>
+					</div>
+					<div class="card shadow" style="width: 18rem;">
+						<img src="https://assets-global.website-files.com/5c6d6c45eaa55f57c6367749/624b471bdf247131f10ea14f_61d31b8dbff9b500cbd7ed32_types_of_rooms_in_a_5-star_hotel_2_optimized_optimized.jpeg">				
+						<div class="card-body ">
+							<p class="text-center p-0 m-0 "><b class="room_id">  1 </b> </p> 
+							<h5 class="room_name text-center"> Luxury Room </h5>
+
+							<div class="w-100">
+								<div class="d-flex flex-wrap justify-content-between"> 
+									<p> 
+										<b class="room_area">Area : </b>
+									</p>
+									<p> 
+										300 sqft
+									</p>
+								</div>
+								<div class="d-flex flex-wrap justify-content-between"> 
+									<p> 
+										<b class="room_guests">Guests : </b>
+									</p>
+									<p> 
+										<b>A: </b>5
+										<br>
+										<b>C: </b>4
+									</p>
+								</div>
+								<div class="d-flex flex-wrap justify-content-between"> 
+									<p> 
+										<b class="room_price">Price : </b>
+									</p>
+									<p> 
+										300$
+									</p>
+								</div>
+								<div class="d-flex flex-wrap justify-content-between"> 
+									<p> 
+										<b class="room_quantity">Qty :</b>
+									</p>
+									<p> 
+										10
+									</p>
+								</div>
+
+
+							</div>
+							<button class="room_status w-100 p-2 bg-dark border-0 text-white rounded font-weight-bold">Active</button>
+							<div class="w-100 text-center text-dark mt-3">
+								<a class="room_delete_btn p-2 border text-dark rounded font-weight-bold"><i class="fa-solid fa-trash-can "></i></a>
+
+								<a href="room_images.html" class="room_images_btn p-2  border text-dark rounded font-weight-bold"><i class="fa-solid fa-image"    ></i>
+								</a>
+								
+								<a class="room_edit_btn p-2  border text-dark rounded font-weight-bold" ><i class="fa-solid fa-pen-to-square"></i></a>
+							</div>
+						</div>
+					</div>
+					<div class="card shadow" style="width: 18rem;">
+						<img src="https://assets-global.website-files.com/5c6d6c45eaa55f57c6367749/624b471bdf247131f10ea14f_61d31b8dbff9b500cbd7ed32_types_of_rooms_in_a_5-star_hotel_2_optimized_optimized.jpeg">				
+						<div class="card-body ">
+							<p class="text-center p-0 m-0 "><b class="room_id">  1 </b> </p> 
+							<h5 class="room_name text-center"> Luxury Room </h5>
+
+							<div class="w-100">
+								<div class="d-flex flex-wrap justify-content-between"> 
+									<p> 
+										<b class="room_area">Area : </b>
+									</p>
+									<p> 
+										300 sqft
+									</p>
+								</div>
+								<div class="d-flex flex-wrap justify-content-between"> 
+									<p> 
+										<b class="room_guests">Guests : </b>
+									</p>
+									<p> 
+										<b>A: </b>5
+										<br>
+										<b>C: </b>4
+									</p>
+								</div>
+								<div class="d-flex flex-wrap justify-content-between"> 
+									<p> 
+										<b class="room_price">Price : </b>
+									</p>
+									<p> 
+										300$
+									</p>
+								</div>
+								<div class="d-flex flex-wrap justify-content-between"> 
+									<p> 
+										<b class="room_quantity">Qty :</b>
+									</p>
+									<p> 
+										10
+									</p>
+								</div>
+
+
+							</div>
+							<button class="room_status w-100 p-2 bg-dark border-0 text-white rounded font-weight-bold">Active</button>
+							<div class="w-100 text-center text-dark mt-3">
+								<a class="room_delete_btn p-2 border text-dark rounded font-weight-bold"><i class="fa-solid fa-trash-can "></i></a>
+
+								<a href="room_images.html" class="room_images_btn p-2  border text-dark rounded font-weight-bold"><i class="fa-solid fa-image"    ></i>
+								</a>
+								
+								<a class="room_edit_btn p-2  border text-dark rounded font-weight-bold" ><i class="fa-solid fa-pen-to-square"></i></a>
+							</div>
+						</div>
+					</div>
+					<div class="card shadow" style="width: 18rem;">
+						<img src="https://assets-global.website-files.com/5c6d6c45eaa55f57c6367749/624b471bdf247131f10ea14f_61d31b8dbff9b500cbd7ed32_types_of_rooms_in_a_5-star_hotel_2_optimized_optimized.jpeg">				
+						<div class="card-body ">
+							<p class="text-center p-0 m-0 "><b class="room_id">  1 </b> </p> 
+							<h5 class="room_name text-center"> Luxury Room </h5>
+
+							<div class="w-100">
+								<div class="d-flex flex-wrap justify-content-between"> 
+									<p> 
+										<b class="room_area">Area : </b>
+									</p>
+									<p> 
+										300 sqft
+									</p>
+								</div>
+								<div class="d-flex flex-wrap justify-content-between"> 
+									<p> 
+										<b class="room_guests">Guests : </b>
+									</p>
+									<p> 
+										<b>A: </b>5
+										<br>
+										<b>C: </b>4
+									</p>
+								</div>
+								<div class="d-flex flex-wrap justify-content-between"> 
+									<p> 
+										<b class="room_price">Price : </b>
+									</p>
+									<p> 
+										300$
+									</p>
+								</div>
+								<div class="d-flex flex-wrap justify-content-between"> 
+									<p> 
+										<b class="room_quantity">Qty :</b>
+									</p>
+									<p> 
+										10
+									</p>
+								</div>
+
+
+							</div>
+							<button class="room_status w-100 p-2 bg-dark border-0 text-white rounded font-weight-bold">Active</button>
+							<div class="w-100 text-center text-dark mt-3">
+								<a class="room_delete_btn p-2 border text-dark rounded font-weight-bold"><i class="fa-solid fa-trash-can "></i></a>
+
+								<a href="room_images.html" class="room_images_btn p-2  border text-dark rounded font-weight-bold"><i class="fa-solid fa-image"    ></i>
+								</a>
+								
+								<a class="room_edit_btn p-2  border text-dark rounded font-weight-bold" ><i class="fa-solid fa-pen-to-square"></i></a>
+							</div>
+						</div>
+					</div>
+					<div class="card shadow" style="width: 18rem;">
+						<img src="https://assets-global.website-files.com/5c6d6c45eaa55f57c6367749/624b471bdf247131f10ea14f_61d31b8dbff9b500cbd7ed32_types_of_rooms_in_a_5-star_hotel_2_optimized_optimized.jpeg">				
+						<div class="card-body ">
+							<p class="text-center p-0 m-0 "><b class="room_id">  1 </b> </p> 
+							<h5 class="room_name text-center"> Luxury Room </h5>
+
+							<div class="w-100">
+								<div class="d-flex flex-wrap justify-content-between"> 
+									<p> 
+										<b class="room_area">Area : </b>
+									</p>
+									<p> 
+										300 sqft
+									</p>
+								</div>
+								<div class="d-flex flex-wrap justify-content-between"> 
+									<p> 
+										<b class="room_guests">Guests : </b>
+									</p>
+									<p> 
+										<b>A: </b>5
+										<br>
+										<b>C: </b>4
+									</p>
+								</div>
+								<div class="d-flex flex-wrap justify-content-between"> 
+									<p> 
+										<b class="room_price">Price : </b>
+									</p>
+									<p> 
+										300$
+									</p>
+								</div>
+								<div class="d-flex flex-wrap justify-content-between"> 
+									<p> 
+										<b class="room_quantity">Qty :</b>
+									</p>
+									<p> 
+										10
+									</p>
+								</div>
+
+
+							</div>
+							<button class="room_status w-100 p-2 bg-dark border-0 text-white rounded font-weight-bold">Active</button>
+							<div class="w-100 text-center text-dark mt-3">
+								<a class="room_delete_btn p-2 border text-dark rounded font-weight-bold"><i class="fa-solid fa-trash-can "></i></a>
+
+								<a href="room_images.html" class="room_images_btn p-2  border text-dark rounded font-weight-bold"><i class="fa-solid fa-image"    ></i>
+								</a>
+								
+								<a class="room_edit_btn p-2  border text-dark rounded font-weight-bold" ><i class="fa-solid fa-pen-to-square"></i></a>
+							</div>
+						</div>
+					</div>
+					<div class="card shadow" style="width: 18rem;">
+						<img src="https://assets-global.website-files.com/5c6d6c45eaa55f57c6367749/624b471bdf247131f10ea14f_61d31b8dbff9b500cbd7ed32_types_of_rooms_in_a_5-star_hotel_2_optimized_optimized.jpeg">				
+						<div class="card-body ">
+							<p class="text-center p-0 m-0 "><b class="room_id">  1 </b> </p> 
+							<h5 class="room_name text-center"> Luxury Room </h5>
+
+							<div class="w-100">
+								<div class="d-flex flex-wrap justify-content-between"> 
+									<p> 
+										<b class="room_area">Area : </b>
+									</p>
+									<p> 
+										300 sqft
+									</p>
+								</div>
+								<div class="d-flex flex-wrap justify-content-between"> 
+									<p> 
+										<b class="room_guests">Guests : </b>
+									</p>
+									<p> 
+										<b>A: </b>5
+										<br>
+										<b>C: </b>4
+									</p>
+								</div>
+								<div class="d-flex flex-wrap justify-content-between"> 
+									<p> 
+										<b class="room_price">Price : </b>
+									</p>
+									<p> 
+										300$
+									</p>
+								</div>
+								<div class="d-flex flex-wrap justify-content-between"> 
+									<p> 
+										<b class="room_quantity">Qty :</b>
+									</p>
+									<p> 
+										10
+									</p>
+								</div>
+
+
+							</div>
+							<button class="room_status w-100 p-2 bg-dark border-0 text-white rounded font-weight-bold">Active</button>
+							<div class="w-100 text-center text-dark mt-3">
+								<a class="room_delete_btn p-2 border text-dark rounded font-weight-bold"><i class="fa-solid fa-trash-can "></i></a>
+
+								<a href="room_images.html" class="room_images_btn p-2  border text-dark rounded font-weight-bold"><i class="fa-solid fa-image"    ></i>
+								</a>
+								
+								<a class="room_edit_btn p-2  border text-dark rounded font-weight-bold" ><i class="fa-solid fa-pen-to-square"></i></a>
+							</div>
+						</div>
+					</div>
+					<div class="card shadow" style="width: 18rem;">
+						<img src="https://assets-global.website-files.com/5c6d6c45eaa55f57c6367749/624b471bdf247131f10ea14f_61d31b8dbff9b500cbd7ed32_types_of_rooms_in_a_5-star_hotel_2_optimized_optimized.jpeg">				
+						<div class="card-body ">
+							<p class="text-center p-0 m-0 "><b class="room_id">  1 </b> </p> 
+							<h5 class="room_name text-center"> Luxury Room </h5>
+
+							<div class="w-100">
+								<div class="d-flex flex-wrap justify-content-between"> 
+									<p> 
+										<b class="room_area">Area : </b>
+									</p>
+									<p> 
+										300 sqft
+									</p>
+								</div>
+								<div class="d-flex flex-wrap justify-content-between"> 
+									<p> 
+										<b class="room_guests">Guests : </b>
+									</p>
+									<p> 
+										<b>A: </b>5
+										<br>
+										<b>C: </b>4
+									</p>
+								</div>
+								<div class="d-flex flex-wrap justify-content-between"> 
+									<p> 
+										<b class="room_price">Price : </b>
+									</p>
+									<p> 
+										300$
+									</p>
+								</div>
+								<div class="d-flex flex-wrap justify-content-between"> 
+									<p> 
+										<b class="room_quantity">Qty :</b>
+									</p>
+									<p> 
+										10
+									</p>
+								</div>
+
+
+							</div>
+							<button class="room_status w-100 p-2 bg-dark border-0 text-white rounded font-weight-bold">Active</button>
+							<div class="w-100 text-center text-dark mt-3">
+								<a class="room_delete_btn p-2 border text-dark rounded font-weight-bold"><i class="fa-solid fa-trash-can "></i></a>
+
+								<a href="room_images.html" class="room_images_btn p-2  border text-dark rounded font-weight-bold"><i class="fa-solid fa-image"    ></i>
+								</a>
+								
+								<a class="room_edit_btn p-2  border text-dark rounded font-weight-bold" ><i class="fa-solid fa-pen-to-square"></i></a>
+							</div>
+						</div>
+					</div>
+					<div class="card shadow" style="width: 18rem;">
+						<img src="https://assets-global.website-files.com/5c6d6c45eaa55f57c6367749/624b471bdf247131f10ea14f_61d31b8dbff9b500cbd7ed32_types_of_rooms_in_a_5-star_hotel_2_optimized_optimized.jpeg">				
+						<div class="card-body ">
+							<p class="text-center p-0 m-0 "><b class="room_id">  1 </b> </p> 
+							<h5 class="room_name text-center"> Luxury Room </h5>
+
+							<div class="w-100">
+								<div class="d-flex flex-wrap justify-content-between"> 
+									<p> 
+										<b class="room_area">Area : </b>
+									</p>
+									<p> 
+										300 sqft
+									</p>
+								</div>
+								<div class="d-flex flex-wrap justify-content-between"> 
+									<p> 
+										<b class="room_guests">Guests : </b>
+									</p>
+									<p> 
+										<b>A: </b>5
+										<br>
+										<b>C: </b>4
+									</p>
+								</div>
+								<div class="d-flex flex-wrap justify-content-between"> 
+									<p> 
+										<b class="room_price">Price : </b>
+									</p>
+									<p> 
+										300$
+									</p>
+								</div>
+								<div class="d-flex flex-wrap justify-content-between"> 
+									<p> 
+										<b class="room_quantity">Qty :</b>
+									</p>
+									<p> 
+										10
+									</p>
+								</div>
+
+
+							</div>
+							<button class="room_status w-100 p-2 bg-dark border-0 text-white rounded font-weight-bold">Active</button>
+							<div class="w-100 text-center text-dark mt-3">
+								<a class="room_delete_btn p-2 border text-dark rounded font-weight-bold"><i class="fa-solid fa-trash-can "></i></a>
+
+								<a href="room_images.html" class="room_images_btn p-2  border text-dark rounded font-weight-bold"><i class="fa-solid fa-image"    ></i>
+								</a>
+								
+								<a class="room_edit_btn p-2  border text-dark rounded font-weight-bold" ><i class="fa-solid fa-pen-to-square"></i></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+
+<script type="text/javascript" src="../assets/js/script.js"></script>

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>new bookings</title>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+	<link rel="stylesheet" 
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<style type="text/css">
+	.my-custom-scrollbar {
+		position: relative;
+		height: 500px;
+		overflow: auto;
+	}
+	.table-wrapper-scroll-y {
+		display: block;
+	}
+</style>
+<body class="overflow-hidden">
+	<div id="container" class="w-100 h-100 d-flex flex-wrap">  
+		<div id="container" class="w-100 vh-100 d-flex flex-wrap">  
+			<div id="left" class="w-25 d-none d-md-block bg-dark text-white shadow">
+				<h2 class="p-2 text-center border border-white border-end-0 border-bottom border-start-0 border-top-0"><i class="fa-solid fa-shop me-2"></i>PHP-Hotel</h2>
+				<ul id="menu" class="list-unstyled p-2 w-100 h-100" style="line-height: 1.5em;">
+					<li class="p-2 rounded"><a href="dashboard.html"  class="btn w-100 text-start text-white"><i class="fa-solid fa-bars me-2"></i>Dashboard</a></li>
+					<li class="p-2 rounded"><a href="new_bookings.html" class="btn w-100 text-start text-white"><i class="fa-solid fa-shirt me-2"></i>New Bookings</a></li>
+					<li class=" p-2 rounded"><a href="all_booking_records.html" class="btn w-100 text-start text-white"><i class="fa-solid fa-person me-2"></i>Booking Records</a></li>
+					<li class=" p-2 rounded"><a href="sales.html" class="btn w-100 text-start text-white"><i class="fa fa-dollar me-2"></i>Users</a></li>
+					<li class=" p-2 rounded"><a href="user_quiries.html" class="btn w-100 text-start text-white"><i class="fa fa-file me-2"></i>Messages</a></li>
+					<li class=" p-2 rounded"><a href="login.html" class="btn w-100 text-start text-white"><i class="fa-solid fa-arrow-left me-2"></i>Ratings</a></li>
+					<li class=" p-2 rounded"><a href="rooms.html" class="btn w-100 text-start text-white"><i class="fa-solid fa-arrow-left me-2"></i>Rooms</a></li>
+					<li class=" p-2 rounded"><a href="admin_facilities.html" class="btn w-100 text-start text-white"><i class="fa-solid fa-arrow-left me-2"></i>Facilities</a></li>
+					<li class=" p-2 rounded"><a href="features.html" class="btn w-100 text-start text-white"><i class="fa-solid fa-arrow-left me-2"></i>Features</a></li>
+					<li class=" p-2 rounded"><a href="carousel.html" class="btn w-100 text-start text-white"><i class="fa-solid fa-arrow-left me-2"></i>Carousel</a></li>
+					<li class=" p-2 rounded"><a href="login.html" class="btn w-100 text-start text-white"><i class="fa-solid fa-arrow-left me-2"></i>Settings</a></li>
+				</ul>
+			</div>
+			<nav class="d-md-none navbar navbar-expand-lg  navbar-dark bg-dark w-100 ">
+				<div class="container-fluid">
+					<a class="navbar-brand" href="#"><i class="fa-solid fa-shop me-2"></i>PHP-Hotel</a>
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="navbarNav">
+						<ul class="navbar-nav">
+							<li class="p-2 rounded nav-item"><a href="dashboard.html"  class="btn w-100 text-start text-white"><i class="fa-solid fa-bars me-2"></i>Dashboard</a></li>
+							<li class="p-2 rounded nav-item"><a href="new_bookings.html" class="btn w-100 text-start text-white"><i class="fa-solid fa-shirt me-2"></i>New Bookings</a></li>
+							<li class=" p-2 rounded nav-item"><a href="all_booking_records.html" class="btn w-100 text-start text-white"><i class="fa-solid fa-person me-2"></i>Booking Records</a></li>
+							<li class=" p-2 rounded nav-item"><a href="sales.html" class="btn w-100 text-start text-white"><i class="fa fa-dollar me-2"></i>Users</a></li>
+							<li class=" p-2 rounded nav-item"><a href="user_quiries.html" class="btn w-100 text-start text-white"><i class="fa fa-file me-2"></i>Messages</a></li>
+							<li class=" p-2 rounded nav-item"><a href="login.html" class="btn w-100 text-start text-white"><i class="fa-solid fa-arrow-left me-2"></i>Ratings</a></li>
+							<li class=" p-2 rounded nav-item"><a href="rooms.html" class="btn w-100 text-start text-white"><i class="fa-solid fa-arrow-left me-2"></i>Rooms</a></li>
+							<li class=" p-2 rounded nav-item"><a href="admin_facilities.html" class="btn w-100 text-start text-white"><i class="fa-solid fa-arrow-left me-2"></i>Facilities</a></li>
+							<li class=" p-2 rounded nav-item"><a href="features.html" class="btn w-100 text-start text-white"><i class="fa-solid fa-arrow-left me-2"></i>Features</a></li>
+							<li class=" p-2 rounded nav-item"><a href="carousel.html" class="btn w-100 text-start text-white"><i class="fa-solid fa-arrow-left me-2"></i>Carousel</a></li>
+							<li class=" p-2 rounded nav-item"><a href="login.html" class="btn w-100 text-start text-white"><i class="fa-solid fa-arrow-left me-2"></i>Settings</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+			<div id="right" class=" w-75 p-4 h-100">
+				<div class="bg-white p-2 shadow">
+					<div class=" py-2 w-100 bg-white d-flex flex-wrap justify-content-between">
+						<span><b> New Bookings </b></span>
+					</div>
+					<div class="table-wrapper-scroll-y my-custom-scrollbar">
+						<table class="table sahdow  overflow-scroll">
+							<thead class="table-dark">
+								<tr>
+									<th scope="col">#</th>
+									<th scope="col">User Details</th>
+									<th scope="col">Room</th>
+									<th scope="col">Boking Details</th>
+									<th scope="col">Date</th>
+									<th scope="col">status</th>
+									<th scope="col">Actions</th>
+								</tr>
+							</thead>
+
+							<tr>
+								<td class="booking_id">1</td>
+								<td class="booking_user_details">
+									<b>Name : </b>Yasir<br><b>Phone : </b>000000<br><b>Address: </b>I9-3, Islamabd 
+								</td>
+								<td class="booking_room_name">Deluxe Room</td>
+								<td class="booking_details">
+									<b>Check in : </b>30/02/2023<br>
+									<b>Check Out : </b>07/03/2023<br>
+								</td>
+								<td class="booking_date">20/02/2023</td>
+								<td class="booking_status"> unpaid </td>
+								<td><button class="assign_booking_btn p-2 bg-dark border-0 text-white rounded font-weight-bold" style="width:8rem"  >Assign Room</button><br>
+									<button class="cancel_booking_btn mt-1 p-2  border text-dark rounded font-weight-bold" style="width:8rem">Cancel</button></td>
+								</tr>
+								<tr>
+								<td class="booking_id">1</td>
+								<td class="booking_user_details">
+									<b>Name : </b>Yasir<br><b>Phone : </b>000000<br><b>Address: </b>I9-3, Islamabd 
+								</td>
+								<td class="booking_room_name">Deluxe Room</td>
+								<td class="booking_details">
+									<b>Check in : </b>30/02/2023<br>
+									<b>Check Out : </b>07/03/2023<br>
+								</td>
+								<td class="booking_date">20/02/2023</td>
+								<td class="booking_status"> unpaid </td>
+								<td><button class="assign_booking_btn p-2 bg-dark border-0 text-white rounded font-weight-bold" style="width:8rem"  >Assign Room</button><br>
+									<button class="cancel_booking_btn mt-1 p-2  border text-dark rounded font-weight-bold" style="width:8rem">Cancel</button></td>
+								</tr>
+								<tr>
+								<td class="booking_id">1</td>
+								<td class="booking_user_details">
+									<b>Name : </b>Yasir<br><b>Phone : </b>000000<br><b>Address: </b>I9-3, Islamabd 
+								</td>
+								<td class="booking_room_name">Deluxe Room</td>
+								<td class="booking_details">
+									<b>Check in : </b>30/02/2023<br>
+									<b>Check Out : </b>07/03/2023<br>
+								</td>
+								<td class="booking_date">20/02/2023</td>
+								<td class="booking_status"> unpaid </td>
+								<td><button class="assign_booking_btn p-2 bg-dark border-0 text-white rounded font-weight-bold" style="width:8rem"  >Assign Room</button><br>
+									<button class="cancel_booking_btn mt-1 p-2  border text-dark rounded font-weight-bold" style="width:8rem">Cancel</button></td>
+								</tr>
+								<tr>
+								<td class="booking_id">1</td>
+								<td class="booking_user_details">
+									<b>Name : </b>Yasir<br><b>Phone : </b>000000<br><b>Address: </b>I9-3, Islamabd 
+								</td>
+								<td class="booking_room_name">Deluxe Room</td>
+								<td class="booking_details">
+									<b>Check in : </b>30/02/2023<br>
+									<b>Check Out : </b>07/03/2023<br>
+								</td>
+								<td class="booking_date">20/02/2023</td>
+								<td class="booking_status"> unpaid </td>
+								<td><button class="assign_booking_btn p-2 bg-dark border-0 text-white rounded font-weight-bold" style="width:8rem"  >Assign Room</button><br>
+									<button class="cancel_booking_btn mt-1 p-2  border text-dark rounded font-weight-bold" style="width:8rem">Cancel</button></td>
+								</tr>
+								<tr>
+								<td class="booking_id">1</td>
+								<td class="booking_user_details">
+									<b>Name : </b>Yasir<br><b>Phone : </b>000000<br><b>Address: </b>I9-3, Islamabd 
+								</td>
+								<td class="booking_room_name">Deluxe Room</td>
+								<td class="booking_details">
+									<b>Check in : </b>30/02/2023<br>
+									<b>Check Out : </b>07/03/2023<br>
+								</td>
+								<td class="booking_date">20/02/2023</td>
+								<td class="booking_status"> unpaid </td>
+								<td><button class="assign_booking_btn p-2 bg-dark border-0 text-white rounded font-weight-bold" style="width:8rem"  >Assign Room</button><br>
+									<button class="cancel_booking_btn mt-1 p-2  border text-dark rounded font-weight-bold" style="width:8rem">Cancel</button></td>
+								</tr>
+								<tr>
+								<td class="booking_id">1</td>
+								<td class="booking_user_details">
+									<b>Name : </b>Yasir<br><b>Phone : </b>000000<br><b>Address: </b>I9-3, Islamabd 
+								</td>
+								<td class="booking_room_name">Deluxe Room</td>
+								<td class="booking_details">
+									<b>Check in : </b>30/02/2023<br>
+									<b>Check Out : </b>07/03/2023<br>
+								</td>
+								<td class="booking_date">20/02/2023</td>
+								<td class="booking_status"> unpaid </td>
+								<td><button class="assign_booking_btn p-2 bg-dark border-0 text-white rounded font-weight-bold" style="width:8rem"  >Assign Room</button><br>
+									<button class="cancel_booking_btn mt-1 p-2  border text-dark rounded font-weight-bold" style="width:8rem">Cancel</button></td>
+								</tr>
+								<tr>
+								<td class="booking_id">1</td>
+								<td class="booking_user_details">
+									<b>Name : </b>Yasir<br><b>Phone : </b>000000<br><b>Address: </b>I9-3, Islamabd 
+								</td>
+								<td class="booking_room_name">Deluxe Room</td>
+								<td class="booking_details">
+									<b>Check in : </b>30/02/2023<br>
+									<b>Check Out : </b>07/03/2023<br>
+								</td>
+								<td class="booking_date">20/02/2023</td>
+								<td class="booking_status"> unpaid </td>
+								<td><button class="assign_booking_btn p-2 bg-dark border-0 text-white rounded font-weight-bold" style="width:8rem"  >Assign Room</button><br>
+									<button class="cancel_booking_btn mt-1 p-2  border text-dark rounded font-weight-bold" style="width:8rem">Cancel</button></td>
+								</tr>
+								<tr>
+								<td class="booking_id">1</td>
+								<td class="booking_user_details">
+									<b>Name : </b>Yasir<br><b>Phone : </b>000000<br><b>Address: </b>I9-3, Islamabd 
+								</td>
+								<td class="booking_room_name">Deluxe Room</td>
+								<td class="booking_details">
+									<b>Check in : </b>30/02/2023<br>
+									<b>Check Out : </b>07/03/2023<br>
+								</td>
+								<td class="booking_date">20/02/2023</td>
+								<td class="booking_status"> unpaid </td>
+								<td><button class="assign_booking_btn p-2 bg-dark border-0 text-white rounded font-weight-bold" style="width:8rem"  >Assign Room</button><br>
+									<button class="cancel_booking_btn mt-1 p-2  border text-dark rounded font-weight-bold" style="width:8rem">Cancel</button></td>
+								</tr>
+								<tr>
+								<td class="booking_id">1</td>
+								<td class="booking_user_details">
+									<b>Name : </b>Yasir<br><b>Phone : </b>000000<br><b>Address: </b>I9-3, Islamabd 
+								</td>
+								<td class="booking_room_name">Deluxe Room</td>
+								<td class="booking_details">
+									<b>Check in : </b>30/02/2023<br>
+									<b>Check Out : </b>07/03/2023<br>
+								</td>
+								<td class="booking_date">20/02/2023</td>
+								<td class="booking_status"> unpaid </td>
+								<td><button class="assign_booking_btn p-2 bg-dark border-0 text-white rounded font-weight-bold" style="width:8rem"  >Assign Room</button><br>
+									<button class="cancel_booking_btn mt-1 p-2  border text-dark rounded font-weight-bold" style="width:8rem">Cancel</button></td>
+								</tr>
+								<tr>
+								<td class="booking_id">1</td>
+								<td class="booking_user_details">
+									<b>Name : </b>Yasir<br><b>Phone : </b>000000<br><b>Address: </b>I9-3, Islamabd 
+								</td>
+								<td class="booking_room_name">Deluxe Room</td>
+								<td class="booking_details">
+									<b>Check in : </b>30/02/2023<br>
+									<b>Check Out : </b>07/03/2023<br>
+								</td>
+								<td class="booking_date">20/02/2023</td>
+								<td class="booking_status"> unpaid </td>
+								<td><button class="assign_booking_btn p-2 bg-dark border-0 text-white rounded font-weight-bold" style="width:8rem"  >Assign Room</button><br>
+									<button class="cancel_booking_btn mt-1 p-2  border text-dark rounded font-weight-bold" style="width:8rem">Cancel</button></td>
+								</tr>
+								<tr>
+								<td class="booking_id">1</td>
+								<td class="booking_user_details">
+									<b>Name : </b>Yasir<br><b>Phone : </b>000000<br><b>Address: </b>I9-3, Islamabd 
+								</td>
+								<td class="booking_room_name">Deluxe Room</td>
+								<td class="booking_details">
+									<b>Check in : </b>30/02/2023<br>
+									<b>Check Out : </b>07/03/2023<br>
+								</td>
+								<td class="booking_date">20/02/2023</td>
+								<td class="booking_status"> unpaid </td>
+								<td><button class="assign_booking_btn p-2 bg-dark border-0 text-white rounded font-weight-bold" style="width:8rem"  >Assign Room</button><br>
+									<button class="cancel_booking_btn mt-1 p-2  border text-dark rounded font-weight-bold" style="width:8rem">Cancel</button></td>
+								</tr>
+								<tr>
+								<td class="booking_id">1</td>
+								<td class="booking_user_details">
+									<b>Name : </b>Yasir<br><b>Phone : </b>000000<br><b>Address: </b>I9-3, Islamabd 
+								</td>
+								<td class="booking_room_name">Deluxe Room</td>
+								<td class="booking_details">
+									<b>Check in : </b>30/02/2023<br>
+									<b>Check Out : </b>07/03/2023<br>
+								</td>
+								<td class="booking_date">20/02/2023</td>
+								<td class="booking_status"> unpaid </td>
+								<td><button class="assign_booking_btn p-2 bg-dark border-0 text-white rounded font-weight-bold" style="width:8rem"  >Assign Room</button><br>
+									<button class="cancel_booking_btn mt-1 p-2  border text-dark rounded font-weight-bold" style="width:8rem">Cancel</button></td>
+								</tr>
+								<tr>
+								<td class="booking_id">1</td>
+								<td class="booking_user_details">
+									<b>Name : </b>Yasir<br><b>Phone : </b>000000<br><b>Address: </b>I9-3, Islamabd 
+								</td>
+								<td class="booking_room_name">Deluxe Room</td>
+								<td class="booking_details">
+									<b>Check in : </b>30/02/2023<br>
+									<b>Check Out : </b>07/03/2023<br>
+								</td>
+								<td class="booking_date">20/02/2023</td>
+								<td class="booking_status"> unpaid </td>
+								<td><button class="assign_booking_btn p-2 bg-dark border-0 text-white rounded font-weight-bold" style="width:8rem"  >Assign Room</button><br>
+									<button class="cancel_booking_btn mt-1 p-2  border text-dark rounded font-weight-bold" style="width:8rem">Cancel</button></td>
+								</tr>
+								<tr>
+								<td class="booking_id">1</td>
+								<td class="booking_user_details">
+									<b>Name : </b>Yasir<br><b>Phone : </b>000000<br><b>Address: </b>I9-3, Islamabd 
+								</td>
+								<td class="booking_room_name">Deluxe Room</td>
+								<td class="booking_details">
+									<b>Check in : </b>30/02/2023<br>
+									<b>Check Out : </b>07/03/2023<br>
+								</td>
+								<td class="booking_date">20/02/2023</td>
+								<td class="booking_status"> unpaid </td>
+								<td><button class="assign_booking_btn p-2 bg-dark border-0 text-white rounded font-weight-bold" style="width:8rem"  >Assign Room</button><br>
+									<button class="cancel_booking_btn mt-1 p-2  border text-dark rounded font-weight-bold" style="width:8rem">Cancel</button></td>
+								</tr>
+								<tr>
+								<td class="booking_id">1</td>
+								<td class="booking_user_details">
+									<b>Name : </b>Yasir<br><b>Phone : </b>000000<br><b>Address: </b>I9-3, Islamabd 
+								</td>
+								<td class="booking_room_name">Deluxe Room</td>
+								<td class="booking_details">
+									<b>Check in : </b>30/02/2023<br>
+									<b>Check Out : </b>07/03/2023<br>
+								</td>
+								<td class="booking_date">20/02/2023</td>
+								<td class="booking_status"> unpaid </td>
+								<td><button class="assign_booking_btn p-2 bg-dark border-0 text-white rounded font-weight-bold" style="width:8rem"  >Assign Room</button><br>
+									<button class="cancel_booking_btn mt-1 p-2  border text-dark rounded font-weight-bold" style="width:8rem">Cancel</button></td>
+								</tr>
+							</table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</body>
+		</html>
+		<script type="text/javascript" src="../assets/js/script.js"></script>

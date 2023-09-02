@@ -1,0 +1,16 @@
+
+.facilty_card:hover
+{
+	transition: transform 1s;
+	transform: scale(1.1);
+	cursor: zoom-in;
+	background-color: white !important;
+	color: black !important;
+}
+.cardd:hover
+{
+	background-color: white !important;
+	color: black !important;
+	transition: transform 1s;
+	transform: scale(1.1);
+}

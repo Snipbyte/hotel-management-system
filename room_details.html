@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+	<!-- <script type="text/javascript" src="main.js"></script> -->
+	<link rel="stylesheet" 
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+	<title>Room Details</title>
+</head>
+<nav class="navbar navbar-expand-lg navbar-dark bg-none" >
+	<div class="container-fluid">
+		<a class="navbar-brand ms-5 fw-bolder " href="#">SarenaHotel</a>
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+		<div class="collapse navbar-collapse " id="navbarSupportedContent">
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto" style="padding: 0px 210px 0px 0px; " >
+				<li class="nav-item">
+					<a class="nav-link active" aria-current="page" href="index.html">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="rooms.html">Rooms</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="facilities.html">Facilities</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="contact_us.html">Contact Us</a>
+				</li>
+
+				
+			</ul>
+
+		</div>
+	</div>
+</nav>
+<body class="">
+
+	<!-- Contact 1 Starts -->
+	<section class="text-white p-5 contact-section w-100
+	" id="room_details">
+	<h2 class="text-center fw-bolder text-white w-100 ">Room Detailes</h2>
+	<p class="bg-secondary mx-auto rounded mb-5" style="width:6rem;height: 5px;"></p>
+	<div class=" px-3">
+		<div id="img" class="text-center w-100 " >
+			<div class="d-flex flex-wrap justify-content-around pb-5">
+				<h3 class="room_name"> Deluxe Room </h3>
+				<h3 class="room_price"> 300$ </h3>
+			</div>
+			<div id="carouselExampleInterval" class="carousel slide " data-bs-ride="carousel">
+				<div class="carousel-inner">
+					<div class="carousel-item active" data-bs-interval="2000">
+						<img src="https://images.pexels.com/photos/376531/pexels-photo-376531.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="d-block mx-auto" style="height: 400px;">
+					</div>
+					<div class="carousel-item " data-bs-interval="2000">
+						<img src="https://images.pexels.com/photos/210552/pexels-photo-210552.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="d-block mx-auto" style="height: 400px;">
+					</div>
+					<div class="carousel-item " data-bs-interval="2000">
+						<img src="https://images.pexels.com/photos/2082095/pexels-photo-2082095.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="d-block mx-auto" style="height: 400px;">
+					</div>
+					<div class="carousel-item " data-bs-interval="2000">
+						<img src="https://images.pexels.com/photos/1571452/pexels-photo-1571452.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" class="d-block mx-auto" style="height: 400px;">
+					</div>
+				</div>
+
+				<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+					<span class="carousel-control-prev-icon d-md-none" aria-hidden="true"></span>
+					<span class="visually-hidden">Previous</span>
+					<i class="fa-solid fa-angle-left d-none d-md-block text-white" style="font-size:250px"></i>
+				</button>
+				<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+					<span class="carousel-control-next-icon d-md-none" aria-hidden="true"></span>
+					<span class="visually-hidden">Next</span>
+					<i class="fa-solid fa-angle-right d-none d-md-block text-primary" style="font-size:250px"></i>
+				</button>
+			</div>
+
+
+		</div>
+		<div class=" w-100 p-5">
+			<div class="w-100 mt-md-3">
+				<div class="  mt-2"> 
+					<b class="room_features">Features</b>
+					<p> 
+						Balcony , Sea View , Roof Door
+					</p>
+				</div>
+				<div class="  mt-2"> 
+					<b class="room_facilities">Facilities</b>
+					<p> 
+						Heater , Massage , Wifi 
+					</p>
+				</div>
+
+				<div class="mt-2 p-0"> 
+
+					<b class="room_guests">Guests  </b>
+
+					<p class="p-0"> 
+						<b>Adults: </b>5 
+
+						<b>Children: </b>4 
+					</p>
+				</div>
+				<div class="mt-2 p-0"> 
+					<p class="p-0"> 
+						<b>Area: </b>300 sq ft
+					</p>
+				</div>
+				<div class="mt-2 p-0"> 
+					<b class="room_description">Description  </b>
+
+
+					<p class="p-0"> 
+
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					proident, sunt in culpa qui officia deserunt mollit anim id est laborum.					</p>
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+</section>
+<!-- Contact 1 Ends -->
+</body>
+</html>
+
+<script type="text/javascript" src="assets/js/script.js"></script>
